@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Портфолио | Junior Frontend / IT-специалист</title>
+  <meta name="description" content="Портфолио выпускницы СПбГУПТД: сайты, дипломный проект, игры, SQL, базы данных и проектирование IDEF0, IDEF3, DFD, ER-диаграммы." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header" id="home">
+    <nav class="nav container">
+      <a class="logo" href="#home">Техническое портфолио</a>
+      <div class="nav-links">
+        <a href="#about">Обо мне</a>
+        <a href="#skills">Навыки</a>
+        <a href="#projects">Проекты</a>
+        <a href="#design">Проектирование</a>
+        <a href="#code">Код</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+    </nav>
+
+    <section class="hero container">
+      <div>
+        <p class="subtitle-header">Junior web / frontend / IT-специалист</p>
+        <h1>Воробьева Светлана</h1>
+        <p class="hero-text">
+          Выпускница СПбГУПТД, направление «Прикладная информатика в&nbsp;дизайне».
+          <br>Создаю и публикую веб-сайты, работаю с&nbsp;frontend, SQL, базами данных,
+          Python и&nbsp;материалами системного проектирования.
+        </p>
+        <div class="buttons">
+          <a class="btn" href="#projects">Смотреть проекты</a>
+          <a class="btn btn-outline" href="#contacts">Связаться</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+          <span class="tag">🎨 Творческое портфолио</span>
+
+          <h3>Дизайн и визуальные проекты</h3>
+
+          <p>
+              Графический дизайн, 3D-моделирование, анимация, моушн-дизайн,
+              Adobe Photoshop, Adobe Illustrator, Adobe Indesign, Adobe After Effect, Blender,
+              учебные и личные творческие работы.
+          </p>
+
+          <a href="ССЫЛКА_НА_ПОРТФОЛИО" class="portfolio-link">
+              Открыть портфолио →
+          </a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section container" id="about">
+        <h2>Обо мне</h2>
+        <p class="subtitle">Проекты</p>
+    </section>
+
+    <section class="section container" id="skills">
+      <h2>Навыки</h2>
+      <p class="subtitle">Проекты</p>
+      <div class="skills">
+        <span>Frontend</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>SQL</span>
+        <span>Python</span><span>Access</span><span>Базы данных</span>
+        <span>Adobe Photoshop</span><span>Adobe Illustrator</span><span>Adobe After Effect</span><span>Adobe Indesign</span>
+        <span>Blender</span>
+      </div>
+    </section>
+
+    <section class="section container" id="projects">
+      <h2>Основные проекты</h2>
+      <p class="subtitle">Проекты</p>
+      <div class="grid cards">
+
+        <article class="card">
+          <span class="tag">Vercel</span>
+          <h3>Дипломный сайт</h3>
+          <p>Дипломный проект, опубликованный на Vercel, с описанием задачи, функций и результата.</p>
+          <a href="https://your-project.vercel.app" target="_blank" rel="noopener noreferrer">Открыть проект</a>
+        </article>
+
+        <article class="card">
+          <span class="tag">Python</span>
+          <h3>Игра на Python</h3>
+          <p>Игровой проект с логикой состояний, обработкой событий и игровой механикой.</p>
+          <a href="https://github.com/username/python-game" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </article>
+
+        <article class="card">
+          <span class="tag">C++</span>
+          <h3>Игра на C++</h3>
+          <p>Проект на C++ с алгоритмами, классами, логикой игры и структурой программы.</p>
+          <a href="https://github.com/username/cpp-game" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section container" id="design">
+      <h2>Диаграммы и аналитика</h2>
+      <p class="subtitle">Проектирование</p>
+      <div class="grid design-grid">
+        <article class="card diagram"><strong>IDEF0</strong><p>Функциональное моделирование системы.</p></article>
+        <article class="card diagram"><strong>IDEF3</strong><p>Описание процессов, сценариев и последовательностей.</p></article>
+        <article class="card diagram"><strong>DFD</strong><p>Диаграммы потоков данных.</p></article>
+        <article class="card diagram"><strong>Схемы БД</strong><p>Таблицы, ключи, связи и структура данных.</p></article>
+        <article class="card diagram"><strong>ER-диаграммы</strong><p>Сущности, атрибуты и отношения.</p></article>
+        <article class="card diagram"><strong>SQL-запросы</strong><p>SELECT, JOIN, GROUP BY, подзапросы и отчеты.</p></article>
+      </div>
+
+      <pre class="code-example"><code>SELECT
+  projects.title,
+  categories.name AS category,
+  COUNT(technologies.id) AS tech_count
+FROM projects
+JOIN categories ON categories.id = projects.category_id
+JOIN project_technologies ON project_technologies.project_id = projects.id
+JOIN technologies ON technologies.id = project_technologies.technology_id
+GROUP BY projects.title, categories.name;</code></pre>
+    </section>
+
+    <section class="section container" id="code">
+      <h2>GitHub-репозитории</h2>
+      <p class="subtitle">Код</p>
+      <div class="grid cards small-cards">
+        <a class="card" href="https://github.com/username/portfolio" target="_blank" rel="noopener noreferrer">Репозиторий сайта</a>
+        <a class="card" href="https://github.com/username/diploma" target="_blank" rel="noopener noreferrer">Дипломный проект</a>
+        <a class="card" href="https://github.com/username/python-game" target="_blank" rel="noopener noreferrer">Игра на Python</a>
+        <a class="card" href="https://github.com/username/cpp-game" target="_blank" rel="noopener noreferrer">Игра на C++</a>
+        <a class="card" href="https://github.com/username/sql-projects" target="_blank" rel="noopener noreferrer">SQL / database projects</a>
+      </div>
+    </section>
+
+    <section class="section container" id="contacts">
+      <h2>Связаться со мной</h2>
+      <p class="subtitle">Контакты</p>
+      <div class="contact-box">
+        <a href="mailto:you@example.com">you@example.com</a>
+        <a href="https://t.me/username" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a href="https://github.com/username" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://hh.ru/resume/your-id" target="_blank" rel="noopener noreferrer">HH</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <h2>Формулировка для резюме</h2>
+    <p>
+      Портфолио: личный сайт с проектами, ссылками на исходный код,
+      опубликованными веб-сайтами, дипломным проектом, SQL-работами,
+      диаграммами IDEF0/IDEF3/DFD и примерами проектирования баз данных.
+    </p>
+    <p class="copy">© <span id="year"></span> Светана Воробьева</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
