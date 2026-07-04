@@ -8,6 +8,9 @@ const modalTitle = document.getElementById('modalTitle');
 const modalClientTitle = document.getElementById('modalClientTitle');
 const modalToolsTitle = document.getElementById('modalToolsTitle');
 const modalTools = document.getElementById('modalTools');
+const modalType = document.getElementById('modalType');
+const modalClient = document.getElementById('modalClient');
+const modalLink = document.getElementById('modalLink');
 const modalGalleryTitle = document.getElementById('modalGalleryTitle');
 const modalVideoTitle = document.getElementById('modalVideoTitle');
 const modalDescriptionTitle = document.getElementById('modalDescriptionTitle');
@@ -42,12 +45,16 @@ function updateCharacterFrame(index) {
   if (!characterFrames.length) return;
 
   currentFrame = (index + characterFrames.length) % characterFrames.length;
+  console.log('СТАВЛЮ КАРТИНКУ:', characterFrames[currentFrame]);
   characterImage.src = characterFrames[currentFrame];
   frameRange.value = String(currentFrame);
   viewerCaption.textContent = `Ракурс ${currentFrame + 1} из ${characterFrames.length}`;
 }
 
 function openProjectModal(button) {
+   modalType.textContent = button.dataset.modalType || 'Проект';
+   modalTitle.textContent = button.dataset.modalTitle || 'Название проекта';
+   modalClient.textContent = button.dataset.modalClient || '';
     modalClientTitle.textContent = button.dataset.modalClientTitle || 'Заказчик / формат';
     modalToolsTitle.textContent = button.dataset.modalToolsTitle || 'Программы для реализации проекта';
     modalTools.textContent =
@@ -75,12 +82,13 @@ function openProjectModal(button) {
 
   if (button.dataset.modalType === 'character') {
     characterFrames = [
-      button.dataset.frame1,
-      button.dataset.frame2,
-      button.dataset.frame3,
-      button.dataset.frame4
+      button.getAttribute('data-frame-1'),
+      button.getAttribute('data-frame-2'),
+      button.getAttribute('data-frame-3'),
+      button.getAttribute('data-frame-4')
     ].filter(Boolean);
 
+    frameRange.max = characterFrames.length - 1;
     characterViewer.hidden = false;
     updateCharacterFrame(0);
   } else {
@@ -199,5 +207,23 @@ if (prevFrame && nextFrame && frameRange) {
 
   frameRange.addEventListener('input', (event) => {
     updateCharacterFrame(Number(event.target.value));
+  });
+}
+
+
+
+
+const burger = document.querySelector('.burger');
+const navLinks = document.querySelector('.nav-links');
+
+if (burger && navLinks) {
+  burger.addEventListener('click', () => {
+    navLinks.classList.toggle('is-open');
+  });
+
+  navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('is-open');
+    });
   });
 }

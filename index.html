@@ -16,6 +16,12 @@
         SVETLANA
       </a>
 
+       <button class="burger" type="button" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <div class="nav-links">
         <a href="#about">Обо мне</a>
         <a href="#motion">Работы</a>
@@ -27,13 +33,12 @@
       <div class="hero-content">
         <div class="glass glass-small"></div>
 
-        <p class="hero-subtitle">
-          Моушн-дизайн, анимация
-          <span>и разработка персонажей</span>
-        </p>
-
         <h1 class="hero-title">PORTFOLIO</h1>
 
+        <p class="hero-subtitle">
+          Моушн-дизайн, анимация, иллюстрации
+          <span>и разработка персонажей</span>
+        </p>
 
         <div class="hero-info">
 
@@ -129,7 +134,8 @@
             data-modal-client="Личный творческий проект"
             data-modal-tools="Adobe After Effects, Illustrator, Photoshop"
             data-modal-description="Короткая анимационная работа. Здесь можно описать идею, этапы создания, подготовку графики, анимацию сцен, монтаж и финальный экспорт."
-            data-modal-video="https://www.youtube.com/embed/VIDEO_ID">
+            data-modal-video-title="Рекламный ролик"
+            data-modal-video="https://res.cloudinary.com/ddurouw1x/video/upload/q_auto,f_auto,w_1920/v1783184143/0330_nyuv2s.mp4">
             Подробнее
           </button>
         </article>
@@ -143,7 +149,7 @@
       <div class="grid cards">
         <article class="card project-card">
           <span class="tag">Character</span>
-          <h3>Разработка персонажа</h3>
+          <h3>Разработка маскота</h3>
           <p>Персонаж с раскадровкой в 4 ракурса и просмотром на 360°.</p>
           <button class="project-btn" type="button"
             data-modal-type="character"
@@ -152,9 +158,9 @@
             data-modal-tools="Adobe Photoshop, Illustrator, Blender, character design"
             data-modal-description="Проект разработки персонажа: поиск образа, силуэт, цветовое решение, финальный дизайн и 4 основных ракурса. В модальном окне добавлен просмотр персонажа по сторонам: фронт, бок, спина и второй бок."
             data-frame-1="images/needle_1.png"
-            data-frame-2="images/character-side.png"
-            data-frame-3="images/character-back.png"
-            data-frame-4="images/character-side-2.png">
+            data-frame-2="images/needle_1.png"
+            data-frame-3="images/needle_1.png"
+            data-frame-4="images/needle_1.png">
             Подробнее
           </button>
         </article>
@@ -168,7 +174,7 @@
             data-modal-client="Личный / учебный проект"
             data-modal-tools="Blender, 3D-моделирование, материалы, рендер, turntable 360°"
             data-modal-description="Проект 3D-моделирования персонажа. Здесь можно описать этапы: блокинг формы, детализация, материалы, свет, рендер, подготовка презентационных изображений и создание turntable-видео, где персонаж вращается по часовой стрелке на 360°."
-            data-modal-gallery="images/modeling-1.jpg, images/modeling-2.jpg, images/modeling-3.jpg, images/modeling-4.jpg"
+            data-modal-gallery="images/leshy.png, images/modeling-2.jpg, images/modeling-3.jpg, images/modeling-4.jpg"
             data-modal-video="https://www.youtube.com/embed/VIDEO_ID">
             Подробнее
           </button>
@@ -247,6 +253,7 @@
     </p>
     <p class="copy">© <span id="year"></span> Светлана Воробьева</p>
   </footer>
+
 <div class="modal" id="projectModal" aria-hidden="true">
     <div class="modal-overlay" data-close-modal></div>
 
