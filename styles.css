@@ -247,6 +247,34 @@ a { color: inherit; text-decoration: none; }
   background: rgba(255,255,255,.45);
 }
 
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+}
+
+.skills-wrapper{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:50px;
+    align-items:start;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+.skills-list li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.skills-list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+}
+
 .hero-image {
   position: absolute;
   top: 0;
@@ -859,6 +887,11 @@ h3 { margin: 12px 0 10px; }
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .skills-wrapper{
+        grid-template-columns:1fr;
+        gap:35px;
+  }
 }
 
 /* ===== Mobile ===== */
@@ -1019,4 +1052,8 @@ h3 { margin: 12px 0 10px; }
   .grid {
     grid-template-columns: 1fr;
   }
+
+    .skills-wrapper{
+        gap:28px;
+    }
 }
