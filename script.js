@@ -62,10 +62,10 @@ function openProjectModal(button) {
     modalGalleryTitle.textContent = button.dataset.modalGalleryTitle || 'Галерея проекта';
     modalVideoTitle.textContent = button.dataset.modalVideoTitle || 'Видео / 360° просмотр';
 
-    modalDescriptionTitle.textContent =
+    modalDescriptionTitle.innerHTML =
     button.dataset.modalDescriptionTitle || "Описание";
 
-    modalDescription.textContent =
+    modalDescription.innerHTML =
     button.dataset.modalDescription || '';
 
     const link = button.dataset.modalLink;
