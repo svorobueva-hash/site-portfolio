@@ -509,6 +509,11 @@ h3 { margin: 12px 0 10px; }
     gap: 22px;
     flex-wrap: wrap;
   }
+
+  .nav-links a {
+    color: var(--text);
+    font-size: 14px;
+  }
 }
 
 
